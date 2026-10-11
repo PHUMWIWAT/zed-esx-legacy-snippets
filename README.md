@@ -1,35 +1,33 @@
 # ESX Legacy Snippets
 
-Snippet ของ ESX Legacy สำหรับไฟล์ Lua ใน [Zed](https://zed.dev)
+ESX Legacy snippets for Lua files in [Zed](https://zed.dev).
 
-Snippet อยู่ใน `snippets/lua.json` และถูกลงทะเบียนจาก `extension.toml`
+Snippets live in `snippets/lua.json` and are registered from `extension.toml`.
 
-## ติดตั้ง
+## Install
 
-1. เปิด Zed แล้วรันคำสั่ง `zed: install dev extension`
-2. เลือกโฟลเดอร์ของ repository นี้
-3. เปิดไฟล์ `.lua`
+1. In Zed, run `zed: install dev extension`.
+2. Select this repository folder.
+3. Open a `.lua` file.
 
-ถ้าเคยติดตั้งเวอร์ชันที่เผยแพร่ไว้แล้ว Zed จะใช้ dev extension นี้แทน
+If a published copy of this extension is already installed, Zed uses this dev extension instead.
 
-## ใช้ snippet
+## Use a snippet
 
-พิมพ์ `prefix` ในไฟล์ Lua แล้วเลือก snippet จากรายการเติมคำ
+Type a prefix in a Lua file, then pick the snippet from the completion list.
 
-ตัวอย่าง:
-
-| พิมพ์ | ได้ |
+| Type | Inserts |
 | --- | --- |
-| `ESX.RegisterCommand` | คำสั่ง `ESX.RegisterCommand` |
-| `ESX:playerloaded` | event `esx:playerLoaded` |
+| `ESX.RegisterCommand` | An `ESX.RegisterCommand` command |
+| `ESX:playerloaded` | The `esx:playerLoaded` event |
 | `ESX.SharedObject` | `exports['es_extended']:getSharedObject()` |
 | `xPlayer.addMoney` | `xPlayer.addMoney(money)` |
 
-บาง snippet มี `$0` จุดนั้นคือตำแหน่งเคอร์เซอร์หลังวาง snippet กด Tab เพื่อไปจุดถัดไป
+Some snippets include `$0`. That is the final cursor position. Press Tab to move to the next stop.
 
-## แก้ snippet
+## Edit snippets
 
-แก้ที่ `snippets/lua.json` แต่ละรายการต้องมีชื่อกับ `body` ฟิลด์ `prefix` ใช้เป็นคำที่พิมพ์เรียก ถ้าไม่ใส่ `prefix` Zed จะใช้ชื่อ snippet แทน
+Edit `snippets/lua.json`. Each snippet needs a name and a `body`. `prefix` is the text you type to trigger it. When `prefix` is omitted, Zed uses the snippet name.
 
 ```json
 {
@@ -41,4 +39,4 @@ Snippet อยู่ใน `snippets/lua.json` และถูกลงทะเ
 }
 ```
 
-เครื่องหมาย `$` ที่ไม่ใช่จุด Tab ต้องเขียนเป็น `\\$`
+A `$` that is not a tab stop must be written as `\\$`.
