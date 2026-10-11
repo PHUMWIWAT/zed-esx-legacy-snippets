@@ -1,0 +1,9 @@
+id = "esx-legacy-snippets"
+name = "ESX Legacy Snippets"
+version = "0.0.1"
+schema_version = 1
+authors = ["PHUMWIWAT <phumwiwat2547@gmail.com>"]
+description = "Snippets for ESX Legacy Lua."
+
+# Filename is the Zed language name in lowercase. Lua -> lua.json.
+snippets = ["./snippets/lua.json"]
