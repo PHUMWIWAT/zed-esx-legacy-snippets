@@ -4,6 +4,7 @@ version = "0.0.1"
 schema_version = 1
 authors = ["PHUMWIWAT <phumwiwat2547@gmail.com>"]
 description = "Snippets for ESX Legacy Lua."
+repository = "https://github.com/PHUMWIWAT/zed-esx-legacy-snippets"
 
 # Filename is the Zed language name in lowercase. Lua -> lua.json.
 snippets = ["./snippets/lua.json"]
